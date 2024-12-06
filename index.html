@@ -3,23 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片展示</title>
+    <title>Certificate</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
+            flex-direction: column;
         }
-        img {
+        .certificate {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px;
+        }
+        .certificate h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .certificate p {
+            font-size: 18px;
+            color: #555;
+            margin: 10px 0;
+        }
+        .certificate .number {
+            font-weight: bold;
+            font-size: 20px;
+            color: #007bff;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
             max-width: 100%;
-            max-height: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .certificate {
+                padding: 15px;
+                max-width: 90%;
+            }
+            .certificate h1 {
+                font-size: 20px;
+            }
+            .certificate p {
+                font-size: 16px;
+            }
+            .image-container img {
+                max-width: 80%; /* Limit image size on smaller screens */
+            }
         }
     </style>
 </head>
 <body>
-    <img src="image.jpg" alt="展示图片">
+    <div class="certificate">
+        <h1>Certificate of Completion</h1>
+        <p>This certifies that the holder of this document has successfully completed the required qualifications.</p>
+        <p>Certificate Number:</p>
+        <p class="number">248067</p>
+        <p>Issued by: AIDA International</p>
+    </div>
+    <div class="image-container">
+        <img src="image.jpg" alt="Certificate Image">
+    </div>
 </body>
 </html>
